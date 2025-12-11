@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صحة - الإجازات المرضية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-arabic">صحة</span>
+                            <span class="logo-english">Seha</span>
+                        </div>
+                    </div>
+                    
+                    <nav class="main-nav">
+                        <a href="#" class="nav-link active">الرئيسية</a>
+                        <a href="#" class="nav-link">الخدمات</a>
+                        <a href="#" class="nav-link">الاستعلامات</a>
+                        <a href="#" class="nav-link">الأسئلة الشائعة</a>
+                        <a href="#" class="nav-link">تواصل معنا</a>
+                    </nav>
+                    
+                    <div class="header-actions">
+                        <a href="#" class="create-account">إنشاء حساب</a>
+                        <button class="btn-login">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            تسجيل الدخول
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-card">
+                <h1 class="page-title">الإجازات المرضية</h1>
+                
+                <p class="page-description">
+                    خدمة الاستعلام عن الإجازات المرضية تتيح لك الاستعلام عن حالة طلبك للإجازة ويمكنك طباعتها عن طريق تطبيق صحتي
+                </p>
+                
+                <form id="inquiryForm" class="inquiry-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="serviceCode" class="form-label">رمز الخدمة</label>
+                            <input 
+                                type="text" 
+                                id="serviceCode" 
+                                name="serviceCode" 
+                                class="form-input" 
+                                placeholder="أدخل رمز الخدمة"
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="idNumber" class="form-label">رقم الهوية / الإقامة</label>
+                            <input 
+                                type="text" 
+                                id="idNumber" 
+                                name="idNumber" 
+                                class="form-input" 
+                                placeholder="أدخل رقم الهوية أو الإقامة"
+                                maxlength="10"
+                            >
+                        </div>
+                    </div>
+                    
+                    <div id="resultsContainer" class="results-container" style="display: none;">
+                        <div id="resultsContent" class="results-content">
+                            <!-- Results will be displayed here -->
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            استعلام
+                        </button>
+                    </div>
+                </form>
+                
+                <div id="errorContainer" class="error-container" style="display: none;">
+                    <div class="error-message">
+                        <span id="errorMessage"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-arabic">صحة</span>
+                            <span class="logo-english">Seha</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        منصة صحة هي إحدى مبادرات وزارة الصحة التي تهدف إلى تقديم الخدمات الصحية الإلكترونية لجميع المنشآت الطبية وتسعى إلى توحيد وأتمتة الإجراءات والخدمات بما يساهم في رفع جودة الأداء وخفض التكاليف.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">القائمة الرئيسية</h3>
+                    <ul class="footer-menu">
+                        <li><a href="#">- الرئيسية</a></li>
+                        <li><a href="#">- الخدمات</a></li>
+                        <li><a href="#">- الاستعلامات</a></li>
+                        <li><a href="#">- الأسئلة الشائعة</a></li>
+                        <li><a href="#">- تواصل معنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">تواصل معنا</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>920002005</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>937@moh.gov.sa</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                            <span>واتساب</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>أوقات العمل</span>
+                        </div>
+                    </div>
+                    <div class="working-hours">
+                        <p>من الأحد إلى الخميس</p>
+                        <p>من 8 صباحاً إلى 4 مساءً</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-logos">
+                    <div class="ministry-logo">
+                        <div class="ministry-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                                <path d="M12 22c-3.31 0-6-2.69-6-6V8l6-3 6 3v8c0 3.31-2.69 6-6 6z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="ministry-text">
+                            <span class="ministry-arabic">وزارة الصحة</span>
+                            <span class="ministry-english">Ministry of Health</span>
+                        </div>
+                    </div>
+                    <div class="lean-logo">
+                        <div class="lean-icon">
+                            <div class="lean-line"></div>
+                            <div class="lean-line"></div>
+                            <div class="lean-line"></div>
+                            <div class="lean-line"></div>
+                        </div>
+                        <span class="lean-text">لين</span>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>جميع الحقوق محفوظة لوزارة الصحة © 2024</p>
+                    <div class="footer-links">
+                        <a href="#">سياسة الخصوصية</a>
+                        <span class="separator">|</span>
+                        <a href="#">دليل الاستخدام</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
