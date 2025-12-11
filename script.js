@@ -119,7 +119,7 @@ function showSpecialResults(serviceCode, idNumber) {
                     </div>
                     <div class="report-field">
                         <span class="report-label">اسم الطبيب:</span>
-                        <span class="report-value">فتحى مسعد ابراهيم الديب</span>
+                        <span class="report-value">محمد أنور محمد مكي</span>
                     </div>
                 </div>
             </div>
@@ -183,7 +183,7 @@ function showResults(serviceCode, idNumber) {
                     </div>
                     <div class="report-field">
                         <span class="report-label">اسم الطبيب:</span>
-                        <span class="report-value">فتحى مسعد ابراهيم الديب</span>
+                        <span class="report-value">محمد أنور محمد مكي</span>
                     </div>
                 </div>
             </div>
